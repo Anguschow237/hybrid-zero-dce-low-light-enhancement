@@ -52,12 +52,22 @@ The project uses the LOL (Low-Light) dataset: 485 training pairs and 15 test pai
 | Hybrid ZeroDCE (Charbonnier Only)  | 16.74    | 0.499    |
 
 ### Visual Examples
-(Include side-by-side comparisons here—upload your before/after images to the repo and embed them, e.g.:)
 
-![Example 1](path/to/result_image1.png)  
-Input (low-light) | Enhanced (U-Net) | Enhanced (Hybrid Dual) | Ground Truth
+#### 1. U-Net with 4 Loss Functions Comparison
+![U-Net Loss Comparison](images/unet-loss-comparison.png)  
+Low-light Input | L1 Output | SSIM Output | Combo Output | Charbonnier Output | Ground Truth
 
-(Repeat for more examples.)
+#### 2. ZeroDCE Unsupervised Training Result
+![ZeroDCE Training](images/zerodce-unsupervised-training-result.png)  
+Training loss curve and sample outputs during unsupervised training.
+
+#### 3. U-Net + Charbonnier vs. ZeroDCE Comparison
+![U-Net vs ZeroDCE](images/unet-charbonnier-vs-zerodce.png)  
+Low-light Input | U-Net + Charbonnier Output | ZeroDCE Output | Ground Truth
+
+#### 4. Final 4-Model Comparison
+![4-Model Comparison](images/four-models-comparison.png)  
+Low-light Input | U-Net Output | ZeroDCE Output | Hybrid Dual Loss Output | Hybrid Charbonnier Only Output | Ground Truth
 
 Supervised U-Net excels in fidelity, while hybrids improve unsupervised baselines with better stability.
 
